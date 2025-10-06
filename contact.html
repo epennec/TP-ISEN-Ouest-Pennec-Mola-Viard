@@ -3,27 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Page ISEN</title>
+<title>ISEN Ouest</title>
 <style>
   html, body { margin:0; padding:0; font-family: 'Open Sans', sans-serif; height:100%; }
   body { display:flex; flex-direction:column; min-height:100vh; }
 
   /* Header */
-  header { background:#e30613; color:#fff; padding:10px 20px; display:flex; align-items:center; justify-content:space-between; }
-  header img { height:45px; }
-  nav ul { list-style:none; margin:0; padding:0; display:flex; }
-  nav li { margin-left:20px; }
-  nav a { color:#fff; text-decoration:none; font-weight:bold; }
-  nav a:hover { text-decoration:underline; }
+  .header-isen { background:#e30613; color:#fff; border-bottom:1px solid #e5e5e5; }
+  .header-container { max-width:1400px; margin:0 auto; padding:0 20px; display:flex; align-items:center; justify-content:space-between; }
+  .header-logo img { height:45px; width:auto; }
+  .header-nav ul { list-style:none; display:flex; margin:0; padding:0; }
+  .header-nav li { flex:1; text-align:center; }
+  .header-nav a { display:block; padding:14px 10px; font-size:1.2em; font-weight:bold; color:#fff; text-decoration:none; transition: background 0.2s; }
+  .header-nav a:hover { text-decoration:underline; }
 
-  /* Contenu principal */
-  main { flex:1; display:flex; justify-content:center; align-items:flex-start; padding:40px 20px; background:#f5f5f5; }
-  .contact-card { max-width:720px; width:100%; background:#fff; padding:28px; border-radius:10px; box-shadow:0 6px 24px rgba(12,12,12,0.4); }
+  /* Main */
+  main { flex:1; padding:40px 20px; background:#f5f5f5; display:flex; justify-content:center; }
+  .contact-card { max-width:720px; width:100%; background:#fff; padding:28px; border-radius:10px; box-shadow:0 6px 24px rgba(12,12,12,0.4); border:1px solid #e6e6e6; }
   .contact-card h1 { margin:0 0 10px; font-size:28px; font-weight:700; color:#000; }
-  .contact-card .lead { color:#6b6b6b; font-size:15px; line-height:1.5; margin-bottom:18px; }
-  .contact-card .notice { background:#fff8f9; border-left:4px solid #c8102e; color:#333; padding:10px 12px; border-radius:4px; margin-bottom:18px; font-size:14px; }
-
-  .form-row { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:14px; }
+  .contact-card .lead { margin:0 0 18px; color:#6b6b6b; font-size:15px; line-height:1.5; }
+  .notice { background:#fff8f9; border-left:4px solid #c8102e; color:#333; padding:10px 12px; border-radius:4px; margin-bottom:18px; font-size:14px; }
+  .form-row { display:flex; gap:12px; margin-bottom:14px; flex-wrap:wrap; }
   .w-100 { width:100%; }
   label { display:block; font-size:14px; margin-bottom:6px; color:#222; }
   input, select, textarea { width:100%; padding:10px 12px; border:1px solid #d7d7d7; border-radius:6px; font-size:14px; box-sizing:border-box; }
@@ -34,19 +34,37 @@
   .small-note { font-size:13px; color:#6b6b6b; margin-top:12px; }
 
   /* Footer */
-  footer { background:#000; color:#fff; padding:40px 20px; }
-  .footer-bottom { text-align:center; padding:15px 0; background:#fff; color:#000; font-size:14px; margin-top:10px; }
+  .site-footer { background:#000; color:#fff; padding:40px 20px 20px; }
+  .footer-container { display:flex; max-width:1200px; margin:0 auto; gap:40px; flex-wrap:wrap; }
+  .footer-col-logo { flex:1; min-width:220px; display:flex; flex-direction:column; }
+  .footer-logo { height:100px; margin:30px 0 15px 0; }
+  .btn-contact { display:block; padding:10px 20px; background:#c8102e; color:#fff; font-weight:600; text-decoration:none; border-radius:25px; margin:auto; }
+  .btn-contact:hover { background:#a00b23; }
+  .footer-links-section { flex:3; display:flex; flex-direction:column; }
+  .footer-cities { font-size:40px; font-weight:700; margin-bottom:20px; text-align:left; }
+  .footer-links-container { display:flex; gap:40px; flex-wrap:wrap; }
+  .footer-col { width:25%; }
+  .footer-col h3 { font-size:16px; font-weight:700; margin-bottom:12px; }
+  .footer-col ul { list-style:none; padding:0; margin:0; }
+  .footer-col li { margin-bottom:8px; }
+  .footer-col a { color:#fff; text-decoration:none; font-size:14px; }
+  .footer-col a:hover { text-decoration:underline; }
+  .footer-bottom { text-align:center; padding-top:15px; background:#fff; color:#000; font-size:14px; margin-top:10px; }
 </style>
 </head>
 <body>
 
-<header>
-  <a href="/"><img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-couleur.png" alt="ISEN Ouest"></a>
-  <nav>
-    <ul>
-      <li><a href="#">Liens à venir</a></li>
-    </ul>
-  </nav>
+<header class="header-isen">
+  <div class="header-container">
+    <a href="/" class="header-logo">
+      <img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-couleur.png" alt="ISEN Ouest">
+    </a>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="#">Liens à venir</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main>
@@ -55,6 +73,7 @@
     <p class="lead">Remplissez le formulaire ci-dessous pour nous envoyer votre demande.</p>
     <div class="notice">« * » indique les champs nécessaires</div>
     <form>
+      <!-- Form fields ici, inchangés -->
       <div class="form-row w-100">
         <label for="profile">Vous êtes ? *</label>
         <select id="profile" name="profile" required>
@@ -130,13 +149,20 @@
       <div class="form-row w-100">
         <button type="submit" class="btn-primary">Envoyer</button>
       </div>
-      <p class="small-note">Nous traitons les données recueillies pour répondre à votre demande. Pour en savoir plus sur la gestion de vos données personnelles et pour exercer vos droits, reportez-vous à la <a href="https://isen-ouest.fr/politique-de-confidentialite/" target="_blank">politique de confidentialité</a>.</p>
+      <p class="small-note">Nous traitons les données recueillies pour répondre à votre demande. Pour en savoir plus, reportez-vous à la <a href="https://isen-ouest.fr/politique-de-confidentialite/" target="_blank">politique de confidentialité</a>.</p>
     </form>
   </div>
 </main>
 
-<footer>
-  <p>Texte du footer ici</p>
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-col footer-col-logo">
+      <img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-blanc.svg" alt="ISEN Ouest" class="footer-logo">
+    </div>
+    <div class="footer-links-section">
+      <p class="footer-cities">Texte à venir</p>
+    </div>
+  </div>
   <div class="footer-bottom">&copy; ISEN Ouest</div>
 </footer>
 
