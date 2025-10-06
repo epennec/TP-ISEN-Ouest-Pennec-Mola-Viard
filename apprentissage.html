@@ -16,12 +16,32 @@
     body{font-family:"Open Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;color:var(--text);background:#fff}
     img{max-width:100%;display:block}
 
-    /* HEADER */
+    /* HEADER (logo + barre rouge sur la même ligne) */
     .header-isen{background:#fff;border-bottom:1px solid var(--border)}
-    .header-top{max-width:1200px;margin:0 auto;padding:10px 20px;display:flex;align-items:center}
-    .header-logo img{height:42px;width:auto}
-    .topbar{background:var(--isen-red);color:#fff}
-    .topbar-inner{max-width:1200px;margin:0 auto;padding:10px 20px;text-align:center;font-weight:800}
+    .header-row{
+      max-width:1200px;
+      margin:0 auto;
+      padding:0 20px;
+      display:flex;
+      align-items:stretch;          /* même hauteur */
+      gap:24px;
+    }
+    .header-logo img{height:42px;width:auto;display:block;margin:auto 0}
+    .topbar{
+      background:var(--isen-red);
+      color:#fff;
+      flex:1;                        /* prend tout l’espace restant */
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .topbar-inner{padding:12px 10px;text-align:center;font-weight:800;width:100%}
+
+    /* Responsive : empile logo + barre rouge si écran étroit */
+    @media (max-width:560px){
+      .header-row{flex-direction:column;gap:8px;padding:8px 20px}
+      .topbar-inner{padding:10px}
+    }
 
     /* SECTION INTRO */
     .wrap{max-width:1200px;margin:30px auto;padding:0 20px}
@@ -51,15 +71,15 @@
 </head>
 <body>
 
-  <!-- Header + barre rouge -->
+  <!-- Header : logo + barre rouge sur une seule ligne -->
   <header class="header-isen">
-    <div class="header-top">
+    <div class="header-row">
       <a class="header-logo" href="/">
         <img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-couleur.png" alt="ISEN Ouest">
       </a>
-    </div>
-    <div class="topbar">
-      <div class="topbar-inner">Liens à venir</div>
+      <div class="topbar">
+        <div class="topbar-inner">Liens à venir</div>
+      </div>
     </div>
   </header>
 
