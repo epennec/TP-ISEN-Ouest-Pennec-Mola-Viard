@@ -1,143 +1,112 @@
-<html>
+<!doctype html>
+<html lang="fr">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-    <style>
-html {
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ISEN — Formations post-bac</title>
+  <style>
+    :root{
+      --isen-red:#e30613;
+      --isen-dark:#000;
+      --border:#e5e5e5;
+      --text:#222;
+    }
+    html,body{margin:0;padding:0}
+    body{font-family:"Open Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;color:var(--text);background:#fff}
+    img{max-width:100%;display:block}
 
-  font-family: Open Sans,sans-serif;
-}
+    /* HEADER */
+    .header-isen{background:#fff;border-bottom:1px solid var(--border)}
+    .header-top{max-width:1200px;margin:0 auto;padding:10px 20px;display:flex;align-items:center}
+    .header-logo img{height:42px;width:auto}
+    .topbar{background:var(--isen-red);color:#fff}
+    .topbar-inner{max-width:1200px;margin:0 auto;padding:10px 20px;text-align:center;font-weight:800}
 
-.site-footer {
-  background: #000;
-  color: #fff;
-  padding: 40px 20px 20px;
-  font-family: Arial, sans-serif;
-}
+    /* WRAPPER */
+    .wrap{max-width:1200px;margin:30px auto;padding:0 20px}
 
-/* Conteneur principal */
-.footer-container {
-  display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 40px;
-  flex-wrap: wrap;
-}
+    /* HERO TEXT + IMAGE */
+    .intro{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;  /* plus d’espace pour le texte */
+      gap:40px;
+      align-items:center;
+    }
+    @media (max-width:900px){
+      .intro{grid-template-columns:1fr;gap:24px}
+    }
+    h1{font-size:40px;line-height:1.15;margin:10px 0 20px}
+    .lead{padding-right:6%}
+    .lead p{margin:0 0 16px;line-height:1.75;color:#333}
+    .figure{justify-self:center}
+    .figure img{border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
 
-/* Colonne 1 : logo + bouton */
-.footer-col-logo {
-  flex: 1;
-  min-width: 220px;
-  display: flex;
-  flex-direction: column;
-}
+    /* BANDEAU NOIR */
+    .banner{background:var(--isen-dark);color:#fff;margin:36px 0 0}
+    .banner-inner{max-width:1200px;margin:0 auto;padding:36px 20px;display:flex;align-items:center;gap:28px}
+    .banner-logo{height:68px}
+    .banner-text{font-size:28px;font-weight:800}
 
-.footer-logo {
-  height: 100px;
-  margin-bottom: 15px;
-  margin-top: 30px;
-}
-
-.btn-contact {
-  display: block;
-  padding: 10px 20px;
-  background: #c8102e;
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 25px;
-  margin: auto;
-}
-
-.btn-contact:hover {
-  background: #a00b23;
-}
-
-/* Zone liens (colonnes 2-4) */
-.footer-links-section {
-  flex: 3;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Titre général */
-.footer-cities {
-  font-size: 40px;
-  font-weight: 700;
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-/* Colonnes de liens */
-.footer-links-container {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.footer-col {
-	width: 25%
-}
-.footer-col h3 {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-col li {
-  margin-bottom: 8px;
-}
-
-.footer-col a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.footer-col a:hover {
-  text-decoration: underline;
-}
-
-/* Bas de page */
-.footer-bottom {
-  text-align: center;
-  padding-top: 15px;
-  background-color: white;
-  color: black;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-}
-    </style>
+    /* FOOTER BOTTOM */
+    .footer-bottom{border-top:1px solid #eee;text-align:center;color:#000;background:#fff;padding:12px}
+  </style>
 </head>
 <body>
-<footer class="site-footer">
-  <div class="footer-container">
 
-    <!-- Colonne 1 : Logo + bouton -->
-    <div class="footer-col footer-col-logo">
-      <img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-blanc.svg" 
-           alt="ISEN Ouest" class="footer-logo">
+  <!-- Header + barre rouge -->
+  <header class="header-isen">
+    <div class="header-top">
+      <a class="header-logo" href="/">
+        <img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-couleur.png" alt="ISEN Ouest">
+      </a>
     </div>
+    <div class="topbar">
+      <div class="topbar-inner">Liens à venir</div>
+    </div>
+  </header>
 
-    <!-- Zone titres + colonnes 2-4 -->
-    <div class="footer-links-section">
-      <!-- Titre général -->
-      <p class="footer-cities">Texte à venir</p>
+  <!-- Contenu principal -->
+  <main class="wrap">
+    <section class="intro" aria-label="Formations post-bac">
+      <div class="lead">
+        <h1>Formations post-bac</h1>
 
+        <p>Chaque étudiant construit son propre parcours de formation sur 5 ans.</p>
 
-  </div>
+        <p>Au cours des trois premières années post-bac, les étudiants choisissent leur
+          cursus parmi 7 cycles de formation différents.</p>
+
+        <p>Au cours de ces 3 années, les élèves acquièrent une solide formation dans
+          les sciences et les technologies numériques tout en approfondissant une
+          spécialité dès la première année après le baccalauréat. Plusieurs passerelles
+          sont possibles durant les 3 premières années si l’étudiant souhaite changer
+          de cycle.</p>
+
+        <p>Après la deuxième année, il est possible de choisir une poursuite d’études
+          sous statut étudiant ou d’opter pour un contrat d’apprentissage.</p>
+
+        <p>Au niveau Master 1, qu’il soit sous statut étudiant ou apprenti, chaque élève
+          accède à un large choix de domaines professionnels sans concours ni critère
+          de classement.</p>
+      </div>
+
+      <figure class="figure">
+        <!-- 🔁 Remplace l’URL ci-dessous par ton schéma “7 cycles post-bac” -->
+        <img src="https://picsum.photos/900/520?random=321" alt="Schéma des cycles post-bac">
+      </figure>
+    </section>
+  </main>
+
+  <!-- Bandeau noir -->
+  <section class="banner" aria-label="Bandeau ISEN">
+    <div class="banner-inner">
+      <img class="banner-logo" src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-blanc.svg" alt="ISEN Ouest">
+      <div class="banner-text">Texte à venir</div>
+    </div>
+  </section>
 
   <!-- Bas de page -->
-</footer>
-<div class="footer-bottom">
-  &copy;
-</div>
+  <div class="footer-bottom">© ISEN</div>
+
 </body>
 </html>
